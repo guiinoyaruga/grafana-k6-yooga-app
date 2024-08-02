@@ -88,13 +88,13 @@ Os campos abaixo, deixe em branco
 - <b>user</b> 
 - <b>password</b> 
 
-3. Clique em "Save & Test" e a mensagem "datasource is working." deve aparecer após clicar no botão. Com isso, o banco já está conectado corretamente. 
+3. Clique em "<b>Save & Test</b>" e a mensagem "<b>datasource is working</b>" deve aparecer após clicar no botão. Com isso, o banco já está conectado corretamente. 
 
 4. Agora, vá em Dashboard no menu lateral e clique no botão "New" no canto direito da tela e por fim, em import.
 
-5. Na próxima tela, clique em "Upload dashboard JSON File" e selecione o json dentro da pasta dashboards do projeto e clique em load.
+5. Na próxima tela, clique em "<b>Upload dashboard JSON File</b>" e selecione o json dentro da pasta dashboards do projeto e clique em load.
 
-6. Com o dashboard criado, rode o comando abaixo com o script desejado, onde 'test.js' deve ser o nome do script que deseja realizar o teste:
+6. Com o dashboard criado, rode o comando abaixo com o script desejado, onde '<b>test.js</b>' deve ser o nome do script que deseja realizar o teste:
 
 ```
  k6 run --out influxdb=http://localhost:8086/k6 scripts/test.js
