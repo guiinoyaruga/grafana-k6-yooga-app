@@ -8,13 +8,13 @@
 
 Para instalar o K6, você pode usar o seguinte comando:
 
-1. Windows
+### Windows
 
 Digite no terminal o seguinte comando para instalar o Windows Package Manager:
 
-<p align="center"```winget install k6 --source winge```</p>
+ ```winget install k6 --source winge```
 
-2. Linux 
+### Linux 
 
 Digite no terminal os seguintes comandos para instalação do K6 no ambiente Linux:
 
@@ -26,11 +26,11 @@ sudo apt-get update
 sudo apt-get install k
 ```
 
-3. Docker
+### Docker
 
 Digite no terminal o seguinte comando para instalar via docker image:
 
-```docker pull grafana/k6```
+ ```docker pull grafana/k6```
 
 Após isso, já é possível utilizar o K6 para realizar diferentes tipos de testes.
 
@@ -39,15 +39,15 @@ Após isso, já é possível utilizar o K6 para realizar diferentes tipos de tes
 
 Primeiro, é necessário utilizar o comando abaixo para que ele suba o Grafana junto do InfluxDB no Docker. Com o terminal aberto na pasta grafana-k6-yooga-app/Docker, digite o comando:
 
-```docker-compose up```
+ ```docker-compose up```
 
 Depois dos containers serem criados, acesse no navegador o dashboard através do link para realizar o login:
 
-```http://localhost:3000```
+ ```http://localhost:3000```
 
 Após isso, é necessário criamos o database do InfluxDB para guardar os dados dos testes realizados. Primeiros vamos precisar buscar o id do container com o comando: 
 
-```docker ps```
+ ```docker ps```
 
 Após ter o container ID, digite no terminal o seguinte comando, substituindo container ID pelo ID do container que foi salvo anteriormente:
 
