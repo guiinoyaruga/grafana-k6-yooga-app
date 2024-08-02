@@ -1,8 +1,5 @@
 <p align="center"><img src="assets/k6-logo-with-grafana.svg" alt="k6" width="258" height="210" /></a></p>
 
-<h3 align="center">Like unit testing, for performance</h3>
-<p align="center">Modern load testing for developers and testers in the DevOps era.</p>
-
 ## Grafana K6
 
 ### Essa documentação tem como proposito demonstrar como é feita a instalação do K6 e também como realizar a instalação do Influx DB para uso do Dashboard em tempo real dos testes realizados.
@@ -77,7 +74,15 @@ Os campos abaixo, deixe em branco
 - user
 - password
 
-3. 
+3. Clique em "Save & Test" e a mensagem "datasource is working." deve aparecer após clicar no botão. Com isso, o banco já está conectado corretamente. 
+
+4. Agora, vá em Dashboard no menu lateral e clique no botão "New" no canto direito da tela e por fim, em import.
+
+5. Na próxima tela, clique em "Upload dashboard JSON File" e selecione o json dentro da pasta dashboards do projeto e clique em load.
+
+6. Com o dashboard criado, rode o comando abaixo com o script desejado, onde 'test.js' deve ser o nome do script que deseja realizar o teste:
+
+```k6 run --out influxdb=http://localhost:8086/k6 scripts/test.js```
 
 
 
