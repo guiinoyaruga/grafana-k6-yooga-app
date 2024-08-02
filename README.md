@@ -12,7 +12,7 @@ Para instalar o K6, você pode usar o seguinte comando:
 
 Digite no terminal o seguinte comando para instalar o Windows Package Manager:
 
- ```winget install k6 --source winge```
+<p align="center"```winget install k6 --source winge```</p>
 
 2. Linux 
 
