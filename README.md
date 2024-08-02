@@ -64,8 +64,8 @@ Acesse o dashboard do Grafana no navegador através do link localhost:3000, vá 
 
 Na próxima página, clique no botão a sua direita da tela chamado "Create a InfluxDB data source". Na proxima tela, preencha somentes os campos abaixo com os seguintes dados:
 
-name: o nome do banco do influxDB (pode ser qualquer nome)
-url: http://influxdb:8086
+- name: o nome do banco do influxDB (pode ser qualquer nome)
+- url: http://influxdb:8086
 
 Os campos abaixo, deixe em branco
 - user
