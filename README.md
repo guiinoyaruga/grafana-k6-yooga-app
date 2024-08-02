@@ -60,6 +60,16 @@ A partir daqui, já temos o banco criado para registro dos dados dos testes real
 
 # Criando o Dashboard conectado ao banco do InfluxDB
 
+Acesse o dashboard do Grafana no navegador através do link localhost:3000, vá em Connections e procure por InfluxDB na barra de pesquisa. Clique na imagem do InfluxDB que irá aparecer após a pesquisa.
+
+Na próxima página, clique no botão a sua direita da tela chamado "Create a InfluxDB data source". Na proxima tela, preencha somentes os campos abaixo com os seguintes dados:
+
+name: o nome do banco do influxDB (pode ser qualquer nome)
+url: http://influxdb:8086
+
+Os campos abaixo, deixe em branco
+- user
+- password
 
 
 
