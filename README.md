@@ -3,11 +3,11 @@
 <h3 align="center">Like unit testing, for performance</h3>
 <p align="center">Modern load testing for developers and testers in the DevOps era.</p>
 
-# Grafana K6
+## Grafana K6
 
 ### Essa documentação tem como proposito demonstrar como é feita a instalação do K6 e também como realizar a instalação do Influx DB para uso do Dashboard em tempo real dos testes realizados.
 
-# Instalando o Grafana K6 
+## Instalando o Grafana K6 
 
 Para instalar o K6, você pode usar o seguinte comando:
 
@@ -38,7 +38,7 @@ Digite no terminal o seguinte comando para instalar via docker image:
 Após isso, já é possível utilizar o K6 para realizar diferentes tipos de testes.
 
 
-# Instalando e criando o container do InfluxDB e Grafana no Docker
+## Instalando e criando o container do InfluxDB e Grafana no Docker
 
 Primeiro, é necessário utilizar o comando abaixo para que ele suba o Grafana junto do InfluxDB no Docker. Com o terminal aberto na pasta grafana-k6-yooga-app/Docker, digite o comando:
 
@@ -63,7 +63,7 @@ Se tudo der certo, o seguinte aviso no terminal deve aparecer:
 A partir daqui, já temos o banco criado para registro dos dados dos testes realizados.
 
 
-# Criando o Dashboard conectado ao banco do InfluxDB
+## Criando o Dashboard conectado ao banco do InfluxDB
 
 1. Acesse o dashboard do Grafana no navegador através do link localhost:3000, vá em Connections e procure por InfluxDB na barra de pesquisa. Clique na imagem do InfluxDB que irá aparecer após a pesquisa.
 
