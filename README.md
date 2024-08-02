@@ -66,7 +66,7 @@ A partir daqui, já temos o banco criado para registro dos dados dos testes real
 
 2. Na próxima página, clique no botão a sua direita da tela chamado "Create a InfluxDB data source". Na proxima tela, preencha somentes os campos abaixo com os seguintes dados:
 
-- name: o nome do banco do influxDB (pode ser qualquer nome)
+- <b>name:</b> o nome do banco do influxDB (pode ser qualquer nome)
 - url: http://influxdb:8086
 - database: k6
 
