@@ -82,7 +82,7 @@ Os campos abaixo, deixe em branco
 
 6. Com o dashboard criado, rode o comando abaixo com o script desejado, onde 'test.js' deve ser o nome do script que deseja realizar o teste:
 
-```k6 run --out influxdb=http://localhost:8086/k6 scripts/test.js```
+ ```k6 run --out influxdb=http://localhost:8086/k6 scripts/test.js```
 
 
 
