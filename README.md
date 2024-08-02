@@ -1,6 +1,6 @@
-# Documentação K6 
+# Grafana K6
 
-## Essa documentação tem como proposito demonstrar como é feita a instalação do K6 e também como realizar a instalação do Influx DB para uso do Dashboard em tempo real do Grafana
+### Essa documentação tem como proposito demonstrar como é feita a instalação do K6 e também como realizar a instalação do Influx DB para uso do Dashboard em tempo real do Grafana
 
 # Instalando o Grafana K6 
 
