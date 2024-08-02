@@ -43,7 +43,8 @@ Após isso, já é possível utilizar o K6 para realizar diferentes tipos de tes
 
 Primeiro, é necessário utilizar o comando abaixo para que ele suba o Grafana junto do InfluxDB no Docker. Com o terminal aberto na pasta grafana-k6-yooga-app/Docker, digite o comando:
 
-```docker-compose up
+```
+docker compose up
 ```
 
 Depois dos containers serem criados, acesse no navegador o dashboard através do link para realizar o login:
