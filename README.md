@@ -1,5 +1,8 @@
 <p align="center"><img src="assets/k6-logo-with-grafana.svg" alt="k6" width="258" height="210" /></a></p>
 
+<h3 align="center">Like unit testing, for performance</h3>
+<p align="center">Modern load testing for developers and testers in the DevOps era.</p>
+
 # Grafana K6
 
 ### Essa documentação tem como proposito demonstrar como é feita a instalação do K6 e também como realizar a instalação do Influx DB para uso do Dashboard em tempo real dos testes realizados.
