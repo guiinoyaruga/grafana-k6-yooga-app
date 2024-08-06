@@ -88,7 +88,7 @@ export default function (authToken) {
   sleep(4);
 
   check(carts, {
-    "Status 201 Ok!": (r) => r.status === 201,
+    "Status 200 Ok!": (r) => r.status === 200,
     "Order Status igual a PREPARING": (r) => r.body.includes("PREPARING"),
   });
 }
