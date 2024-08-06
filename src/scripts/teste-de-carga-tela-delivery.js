@@ -1,4 +1,4 @@
-// Esse teste tem como propósito testar a requisição do histórico de vendas
+// Esse teste tem como propósito testar a requisição de acesso a tela do delivery
 
 import http from "k6/http";
 import { sleep, check } from "k6";

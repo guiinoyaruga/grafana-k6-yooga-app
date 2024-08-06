@@ -10,8 +10,8 @@ export default class Login {
   realizarLogin() {
     const url = "https://api2.yooga.com.br/authenticate";
     const payload = JSON.stringify({
-      login_api: "146.256.737-12",
-      senha_api: "humm3r28@*",
+      login_api: "305.937.800-27",
+      senha_api: "123456",
     });
 
     const params = {
@@ -25,7 +25,7 @@ export default class Login {
 
     check(login, {
       "Status 200 Ok!": (r) => r.status === 200,
-      "IDI encontrado": (r) => r.body.includes("8405"),
+      "IDI encontrado": (r) => r.body.includes("122256"),
     });
 
     let authToken = login.body;
