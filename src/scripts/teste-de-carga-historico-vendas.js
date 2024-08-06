@@ -7,9 +7,9 @@ const login = new Login()
 
 export const options = {
   stages: [
-    { duration: "5s", target: 1 },
-    // { duration: "7m", target: 100 },
-    // { duration: "1m", target: 0 },
+    { duration: "3m", target: 100},
+    { duration: "7m", target: 100 },
+    { duration: "1m", target: 0 },
   ],
 };
 
