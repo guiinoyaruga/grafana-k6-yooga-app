@@ -20,7 +20,7 @@ export function setup() {
 export default function (authToken) {
  let codigoProduto
 
-  group(" Criar produto ", () => {
+  group('Criar produto', () => {
     const url = "https://api2.yooga.com.br/v2/produtos";
 
     const payload = JSON.stringify({
@@ -37,12 +37,12 @@ export default function (authToken) {
 
     check(products, {
       "Status 200 Ok!": (r) => r.status === 200,
-      "Loja do Delivery Encontrada": (r) => r.body.includes("PRODUTO 1"),
+      "Produto criado": (r) => r.body.includes("PRODUTO 1"),
     });
     codigoProduto = JSON.parse(products.body)
   });
 
-  group ('Deletar produto ', ()=>{
+  group('Deletar produto', ()=>{
     const url = "https://api2.yooga.com.br/v2/produtos/delete";
 
     const payload = JSON.stringify({
