@@ -59,7 +59,7 @@ export default function (authToken) {
     userWithdraw: false,
   });
 
-  const carts = http.post(url, payload, {
+  const orders = http.post(url, payload, {
     headers: {
       Authorization: `Bearer ${authToken}`,
       "Content-Type": "application/json",
@@ -68,7 +68,7 @@ export default function (authToken) {
 
   sleep(4);
 
-  check(carts, {
+  check(orders, {
     "Status 200 Ok!": (r) => r.status === 200,
     "Order Status igual a PREPARING": (r) => r.body.includes("PREPARING"),
   });

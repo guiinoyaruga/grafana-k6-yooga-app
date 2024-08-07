@@ -22,7 +22,7 @@ export function setup() {
 export default function (authToken) {
   const url = "https://api2.yooga.com.br/v2/vendas?page=1&inverse=true";
 
-  const carts = http.request("GET", url, null, {
+  const historico = http.request("GET", url, null, {
     headers: {
       Authorization: `Bearer ${authToken}`,
     },
@@ -30,7 +30,7 @@ export default function (authToken) {
 
   sleep(1);
 
-  check(carts, {
+  check(historico, {
     "Status 200 Ok!": (r) => r.status === 200,
     "Body Ok!": (r) =>
       r.body.includes(

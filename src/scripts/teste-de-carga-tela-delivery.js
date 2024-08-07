@@ -19,7 +19,7 @@ export function setup() {
 export default function (authToken) {
   const url = "https://api2.yooga.com.br/delivery/store/details"
 
-  const carts = http.request("GET", url, null, {
+  const gestor = http.request("GET", url, null, {
     headers: {
       Authorization: `Bearer ${authToken}`,
     },
@@ -27,7 +27,7 @@ export default function (authToken) {
 
   sleep(1);
 
-  check(carts, {
+  check(gestor, {
     "Status 200 Ok!": (r) => r.status === 200,
     "Loja do Delivery Encontrada": (r) => r.body.includes("QA Yooga Teste - K6"),
   });
