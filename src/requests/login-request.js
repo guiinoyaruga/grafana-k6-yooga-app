@@ -24,7 +24,7 @@ export default class Login {
     const login = http.post(url, payload, params);
 
     check(login, {
-      "Status 200 Ok!": (r) => r.status === 200,
+      "Login feito com sucesso!": (r) => r.status === 200,
       "IDI encontrado": (r) => r.body.includes("122256"),
     });
 
