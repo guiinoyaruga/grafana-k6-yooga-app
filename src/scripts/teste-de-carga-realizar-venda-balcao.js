@@ -1,7 +1,6 @@
 // Esse teste tem como propósito testar a requisição de criação de uma venda no balcão
 import http from "k6/http";
 import { sleep, check, group } from "k6";
-import { uuidv4 } from "https://jslib.k6.io/k6-utils/1.4.0/index.js";
 import Login from "../requests/login-request.js";
 import { body } from "../payloads/payload-venda.js";
 const login = new Login();
