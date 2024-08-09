@@ -20,7 +20,7 @@ export function setup() {
 export default function (authToken) {
   let codigoVenda
 
-  group("Realizar venda", () => {
+  group("Criar venda", () => {
     const url = "https://api2.yooga.com.br/vendas";
     const payload = JSON.stringify({
       products: [
@@ -83,7 +83,7 @@ export default function (authToken) {
     });
   });
 
-  group("Deletar venda", () => {
+  group("Cancelar venda", () => {
     const url = `https://api2.yooga.com.br/vendas/${codigoVenda.codigo}?motivo=`;
 
     const cancelamento = http.del(url, null, {
