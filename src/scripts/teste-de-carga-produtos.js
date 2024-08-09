@@ -18,9 +18,25 @@ export function setup() {
 }
 
 export default function (authToken) {
- let codigoProduto
+  let codigoProduto;
 
-  group('Criar produto', () => {
+  group("Acessar lista de produtos", () => {
+    const url = "https://api2.yooga.com.br/v2/produtos?"
+
+    const listarProdutos = http.get(url, {
+      headers: {
+        Authorization: `Bearer ${authToken}`,
+        "Content-Type": "application/json",
+      },
+    });
+
+    check(listarProdutos, {
+      "Status 200 Ok!": (r) => r.status === 200,
+      "Lista de produtos recebida": (r) => r.body.length > 0,
+    });
+  })
+
+  group("Criar produto", () => {
     const url = "https://api2.yooga.com.br/v2/produtos";
 
     const payload = JSON.stringify({
@@ -28,37 +44,37 @@ export default function (authToken) {
       valor_venda: 1,
     });
 
-    const products = http.post(url, payload, {
+    const criarProduto = http.post(url, payload, {
       headers: {
         Authorization: `Bearer ${authToken}`,
         "Content-Type": "application/json",
       },
     });
 
-    check(products, {
+    check(criarProduto, {
       "Status 200 Ok!": (r) => r.status === 200,
       "Produto criado": (r) => r.body.includes("PRODUTO 1"),
     });
-    codigoProduto = JSON.parse(products.body)
+    codigoProduto = JSON.parse(criarProduto.body);
   });
 
-  group('Deletar produto', ()=>{
+  group("Deletar produto", () => {
     const url = "https://api2.yooga.com.br/v2/produtos/delete";
 
     const payload = JSON.stringify({
-        products: [codigoProduto.codigo]
+      products: [codigoProduto.codigo],
     });
 
-    const productsDel = http.post(url, payload, {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-          "Content-Type": "application/json",
-        },
-      });
-      check(productsDel, {
-        "Status 201 Ok!": (r) => r.status === 201,
-        "Produto deletado": (r) => r.body.includes("Produtos alterados!"),
-      });
-  })
+    const produtoDeletado = http.post(url, payload, {
+      headers: {
+        Authorization: `Bearer ${authToken}`,
+        "Content-Type": "application/json",
+      },
+    });
+    check(produtoDeletado, {
+      "Status 201 Ok!": (r) => r.status === 201,
+      "Produto deletado": (r) => r.body.includes("Produtos alterados!"),
+    });
+  });
   sleep(1);
 }
