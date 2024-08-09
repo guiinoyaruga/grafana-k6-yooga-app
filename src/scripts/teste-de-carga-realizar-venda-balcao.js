@@ -7,7 +7,11 @@ import { body } from "../payloads/payload-venda.js";
 const login = new Login();
 
 export const options = {
-  stages: [{ duration: "3s", target: 1 }],
+  stages: [
+    { duration: "5m", target: 100 },
+    { duration: "10m", target: 100 },
+    { duration: "0s", target: 0 },
+  ],
 };
 
 export function setup() {
